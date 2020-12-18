@@ -10,6 +10,10 @@ class HelloWorld(luigi.Task):
     def run(self):
         with self.output().open('w') as outfile:
             outfile.write('Hello World!\n')
-    
+
+#Targets are some sort of data that is persisted between task runs.
+# HellIn this tutorial we will only work with luigi.LocalTarget()'s, which are normal files.
+
+
 if __name__ == "__main__":
     luigi.run()
